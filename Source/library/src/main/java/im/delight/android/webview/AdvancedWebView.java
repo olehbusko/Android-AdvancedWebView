@@ -591,16 +591,6 @@ public class AdvancedWebView extends WebView {
 				}
 			}
 
-			@Override
-			public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
-				if (mCustomWebViewClient != null) {
-					mCustomWebViewClient.onReceivedSslError(view, handler, error);
-				}
-				else {
-					super.onReceivedSslError(view, handler, error);
-				}
-			}
-
 			@SuppressLint("NewApi")
 			@SuppressWarnings("all")
 			public void onReceivedClientCertRequest(WebView view, ClientCertRequest request) {
